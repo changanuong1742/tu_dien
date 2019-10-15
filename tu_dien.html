@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        var ten1 = ['name', 'age', 'what', 'long'];
+        var ten2 = ['tên', 'tuổi', 'cái gì', 'dài'];
+
+        function chomsao() {
+            let nhap_ten = document.getElementById("nhap_du_lieu").value;
+            for (let i = 0; i < ten1.length; i++) {
+                if (nhap_ten == ten1[i]) {
+                    document.getElementById("show").innerHTML = ten1[i] + " Là: " + ten2[i];
+                    break;
+                } else {
+                    document.getElementById("show").innerHTML = "Nhập Lại";
+                }
+
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<input id="nhap_du_lieu">
+<p id="show"></p>
+<button id="nhan_nut" onclick="chomsao()">Dịch</button>
+
+</body>
+</html>
